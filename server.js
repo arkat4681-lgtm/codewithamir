@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 const cors = require("cors");
 
