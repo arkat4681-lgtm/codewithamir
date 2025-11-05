@@ -380,3 +380,38 @@ footer {
   .hero h1 { font-size: 34px; }
   .card { width: 90%; }
 }
+/* ===== Responsive Navbar Fix ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-buttons .btn {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
