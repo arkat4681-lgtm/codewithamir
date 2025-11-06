@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sign Up | CODE WITH AMIR</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="auth-container">
-    <h1>Sign Up for CODE WITH AMIR</h1>
-    <form id="signupForm">
-      <input type="text" id="signupName" placeholder="Full Name" required />
-      <input type="email" id="signupEmail" placeholder="Email" required />
-      <input type="tel" id="signupPhone" placeholder="Phone Number" />
-      <select id="signupCountry">
-        <option value="">Select Country</option>
-        <option value="Pakistan">Pakistan (+92)</option>
-        <option value="India">India (+91)</option>
-        <option value="USA">USA (+1)</option>
-        <option value="UK">UK (+44)</option>
-      </select>
-      <input type="password" id="signupPassword" placeholder="Password" required />
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="/login.html">Login</a></p>
-  </div>
+<form id="signupForm">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Sign Up</button>
+</form>
 
-  <script src="/client.js"></script>
-</body>
-</html>
+<script>
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("http://localhost:3000/signup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await res.json();
+  alert(data.message);
+});
+</script>
