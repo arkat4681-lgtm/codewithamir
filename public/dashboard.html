@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Code With Amir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">CodeWithAmir</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" id="logout-btn">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="dashboard-container">
+    <h2>Welcome, <span id="userName"></span> 👋</h2>
+    <div class="profile-section">
+      <img id="profilePhoto" src="uploads/default.jpg" alt="Profile Photo" class="profile-pic">
+      <form id="photoForm" enctype="multipart/form-data">
+        <input type="file" name="photo" accept="image/*" required>
+        <button type="submit">Upload Photo</button>
+      </form>
+    </div>
+    <div class="info">
+      <p><strong>Email:</strong> <span id="userEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="userPhone"></span></p>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
