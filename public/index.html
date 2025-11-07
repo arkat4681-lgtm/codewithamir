@@ -1,54 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code With Amir</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CODE WITH AMIR</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="logo">CodeWithAmir</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="login.html" id="login-link">Login</a></li>
-      <li><a href="signup.html" id="signup-link">Signup</a></li>
-      <li><a href="dashboard.html" id="dashboard-link" style="display:none;">Dashboard</a></li>
-      <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
-    </ul>
-  </nav>
-
-  <header class="hero">
-    <h2>Master Web Development</h2>
-    <p>Learn HTML, CSS, JavaScript and build real-world projects with Amir</p>
-    <a href="#courses" class="hero-btn">Explore Courses</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">CODE WITH AMIR</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons" id="auth-buttons">
+        <a href="/login.html" class="btn">Login</a>
+        <a href="/signup.html" class="btn">Sign Up</a>
+      </div>
+    </nav>
   </header>
 
+  <section id="home" class="hero">
+    <h1 id="welcome-text">Enroll Today to be a Developer</h1>
+    <p>Master web development with HTML, CSS, JavaScript, and backend technologies.</p>
+  </section>
+
   <section id="courses" class="courses">
-    <h2>Popular Courses</h2>
-    <div class="course-grid">
-      <div class="course-card">
-        <h3>HTML + CSS</h3>
-        <p>Learn the fundamentals of web design.</p>
-        <a href="mailto:arkat4681@gmail.com" class="enroll-link">Enroll Now</a>
+    <h2>Our Courses</h2>
+
+    <!-- FRONTEND -->
+    <div class="category">
+      <h3 class="category-title">Frontend Development</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
+          <h3>HTML</h3>
+          <p>Build the structure of web pages using HTML5.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />
+          <h3>CSS</h3>
+          <p>Design modern layouts and animations with CSS3.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JS" />
+          <h3>JavaScript</h3>
+          <p>Create interactivity and build real projects with JS.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
+          <h3>React</h3>
+          <p>Build reusable UI components with React and hooks.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>JavaScript Mastery</h3>
-        <p>Build dynamic and interactive web apps.</p>
-        <a href="mailto:arkat4681@gmail.com" class="enroll-link">Enroll Now</a>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="category">
+      <h3 class="category-title">Backend Development</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node" />
+          <h3>Node.js</h3>
+          <p>Server-side JavaScript with Node.js and Express.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Express" />
+          <h3>Express</h3>
+          <p>Fast and minimal web server framework for Node.js.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
+          <h3>Python</h3>
+          <p>Python basics and backend scripting for web apps.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>Full Stack Development</h3>
-        <p>Become a pro with front & backend coding.</p>
-        <a href="mailto:arkat4681@gmail.com" class="enroll-link">Enroll Now</a>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="category">
+      <h3 class="category-title">Database</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="MongoDB" />
+          <h3>MongoDB</h3>
+          <p>NoSQL database fundamentals and Mongoose integration.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Database" />
+          <h3>SQL & Databases</h3>
+          <p>Learn SQL, relational design and database integration.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="category">
+      <h3 class="category-title">Tools</h3>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111288.png" alt="Git" />
+          <h3>Git & GitHub</h3>
+          <p>Version control, collaboration, pull requests, and workflows.</p>
+          <a href="#" class="enroll-link">Enroll</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="about" class="about">
+    <h2>About CODE WITH AMIR</h2>
+    <p>CODE WITH AMIR is your one-stop platform for learning full-stack web development. From frontend to backend — learn everything that makes you a professional developer.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to enroll manually, contact us directly.</p>
+    <a href="mailto:arkat4681@gmail.com" class="btn">Email Us</a>
+
+    <div class="social">
+      <p>Follow us on YouTube</p>
+      <a href="https://www.youtube.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="youtube-icon" />
+      </a>
+    </div>
+  </section>
+
   <footer>
-    <p>📧 Contact: <a href="mailto:arkat4681@gmail.com">arkat4681@gmail.com</a></p>
-    <p>© 2025 CodeWithAmir | All Rights Reserved</p>
+    <p>© 2025 CODE WITH AMIR | All rights reserved</p>
   </footer>
 
   <script src="client.js"></script>

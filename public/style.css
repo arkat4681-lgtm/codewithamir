@@ -1,181 +1,328 @@
-/* === GLOBAL === */
-body {
+/* ==============================================
+   GLOBAL STYLES
+============================================== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #00111a, #000);
-  color: white;
 }
 
-/* === NAVBAR === */
+body {
+  background: radial-gradient(circle at top, #0a0a1a 0%, #000010 100%);
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ==============================================
+   NAVBAR (USED IN ALL PAGES)
+============================================== */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
+  padding: 15px 40px;
 }
 
 .logo {
-  font-size: 1.6em;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: cyan;
-  text-shadow: 0 0 10px cyan;
+  text-shadow: 0 0 15px cyan;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+  gap: 25px;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: cyan;
-  text-shadow: 0 0 10px cyan;
+  text-shadow: 0 0 8px cyan;
 }
 
-/* === HERO === */
+.nav-buttons .btn {
+  background: cyan;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-buttons .btn:hover {
+  background: white;
+  box-shadow: 0 0 15px cyan;
+}
+
+/* ==============================================
+   HERO SECTION
+============================================== */
 .hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 120px;
+  padding: 100px 20px 40px;
 }
 
-.hero h2 {
-  font-size: 2.5em;
-  text-shadow: 0 0 15px cyan;
+.hero h1 {
+  font-size: 3rem;
+  color: cyan;
+  text-shadow: 0 0 25px cyan;
 }
 
 .hero p {
-  color: #ddd;
-  margin-top: 10px;
+  color: #ccc;
+  max-width: 600px;
+  margin-top: 15px;
+  font-size: 1.2rem;
 }
 
-.hero-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  background: cyan;
-  color: black;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-weight: bold;
-}
-
-.hero-btn:hover {
-  background: white;
-}
-
-/* === COURSES === */
+/* ==============================================
+   COURSES SECTION
+============================================== */
 .courses {
-  padding: 100px 50px;
+  padding: 100px 40px;
   text-align: center;
 }
 
-.course-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+.courses h2 {
+  color: cyan;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px cyan;
 }
 
-.course-card {
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
   transition: 0.3s;
-  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
-.course-card:hover {
-  transform: translateY(-5px);
+.card:hover {
+  transform: translateY(-8px);
   box-shadow: 0 0 25px cyan;
+}
+
+.card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 
 .enroll-link {
   color: cyan;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .enroll-link:hover {
   text-shadow: 0 0 10px cyan;
 }
 
-/* === AUTH PAGES === */
-.auth-body {
+/* ==============================================
+   ABOUT + CONTACT
+============================================== */
+.about, .contact {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.about h2, .contact h2 {
+  color: cyan;
+  text-shadow: 0 0 15px cyan;
+  margin-bottom: 20px;
+}
+
+.about p, .contact p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact a.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: cyan;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact a.btn:hover {
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ==============================================
+   LOGIN & SIGNUP FORMS
+============================================== */
+.auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
-.auth-card {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px cyan;
+.auth-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 50px;
+  border-radius: 20px;
   text-align: center;
-  width: 300px;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
 }
 
-.auth-card h2 {
-  text-shadow: 0 0 10px cyan;
+.auth-box h2 {
+  color: cyan;
+  margin-bottom: 25px;
 }
 
-.auth-card input, .auth-card button {
+.auth-box input {
   width: 100%;
-  margin-top: 10px;
   padding: 10px;
+  margin: 8px 0;
   border: none;
-  border-radius: 10px;
   outline: none;
-}
-
-.auth-card input {
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
   color: white;
 }
 
-.auth-card button {
+.auth-box input::placeholder {
+  color: #aaa;
+}
+
+.auth-box button {
+  width: 100%;
   background: cyan;
   color: black;
-  font-weight: bold;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.auth-card button:hover {
+.auth-box button:hover {
   background: white;
+  box-shadow: 0 0 20px cyan;
 }
 
-/* === DASHBOARD === */
-.dashboard-container {
+/* ==============================================
+   DASHBOARD
+============================================== */
+.dashboard {
   padding-top: 100px;
   text-align: center;
 }
 
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-top: 15px;
-  box-shadow: 0 0 15px cyan;
+.dashboard h2 {
+  color: cyan;
+  text-shadow: 0 0 15px cyan;
 }
 
-/* === FOOTER === */
+.profile-section {
+  background: rgba(255, 255, 255, 0.05);
+  width: 350px;
+  margin: 40px auto;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.profile-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid cyan;
+  box-shadow: 0 0 15px cyan;
+  margin-bottom: 10px;
+}
+
+.profile-section input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  color: cyan;
+}
+
+.profile-section button {
+  background: cyan;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-section button:hover {
+  background: white;
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ==============================================
+   FOOTER
+============================================== */
 footer {
   text-align: center;
-  padding: 30px 0;
-  border-top: 1px solid cyan;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #aaa;
   margin-top: 50px;
 }
